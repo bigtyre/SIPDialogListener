@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netStandard2.0</TargetFramework>
+    <Title>SIP Dialog Listener</Title>
+    <Version>1.0.0</Version>
+    <Authors>bigtyre-isaac</Authors>
+    <Company>Big Tyre Pty Ltd</Company>
+    <Description>Provides a class to raise events for SIP dialog messages on an extension.</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>sip;</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SIPSorcery" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SIPDialogTypes\SIPDialogTypes.csproj" />
+  </ItemGroup>
+
+</Project>
