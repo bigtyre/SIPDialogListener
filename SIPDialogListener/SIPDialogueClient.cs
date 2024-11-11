@@ -30,6 +30,7 @@ namespace BigTyre.Phones
         public event EventHandler<SIPDialogNotificationEventArgs> NotificationReceived;
 
         private readonly SIPProtocolsEnum protocol = SIPProtocolsEnum.tcp;
+
         public SIPDialogueClient(
             string clientIp,
             int clientPort,
@@ -50,7 +51,7 @@ namespace BigTyre.Phones
             var sipTransport = new SIPTransport() { };
             //sipTransport.ContactHost = clientIp;
             //var channel = new SIPTCPChannel(ClientIp, clientPort);
-            var sipChannel = sipTransport.CreateChannel(protocol, System.Net.Sockets.AddressFamily.InterNetwork, port: 5060);
+            var sipChannel = sipTransport.CreateChannel(protocol, System.Net.Sockets.AddressFamily.InterNetwork, port: clientPort);
             sipTransport.AddSIPChannel(sipChannel);
             sipTransport.EnableTraceLogs();
 
